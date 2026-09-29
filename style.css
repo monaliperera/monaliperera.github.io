@@ -64,9 +64,9 @@ nav {
 .hero {
     min-height: calc(100vh - 80px);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 70px 8%;
-    gap: 8%;
+    gap: 6%;
 }
 
 
@@ -77,23 +77,25 @@ nav {
 .photo-container {
     width: 42%;
     position: relative;
+   overflow: hidden;             
+    flex: 0 0 42%;
 }
 
 .photo-background {
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 110%;
+    height: 110%;
     background: #dddff4;
     border-radius: 50%;
-    left: -10%;
+    left: -5%;
     top: 5%;
     z-index: 0;
 }
 
 .profile-photo {
     width: 100%;
-    max-width: 470px;
-    height: 650px;
+    max-width:calc(100vh - 180px);
+    height: auto;
     object-fit: cover;
     object-position: center top;
     border-radius: 220px 220px 30px 30px;
@@ -106,9 +108,10 @@ nav {
 /* ==============================
    INTRODUCTION
    ============================== */
-
 .hero-content {
-    width: 50%;
+width: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 .small-title {
