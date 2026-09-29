@@ -1,0 +1,228 @@
+/* ==============================
+   GENERAL
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf9f7;
+    color: #203b52;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ==============================
+   NAVIGATION BAR
+   ============================== */
+
+nav {
+    height: 80px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #173b55;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #29465c;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #7186a5;
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    gap: 8%;
+}
+
+
+/* ==============================
+   PHOTO
+   ============================== */
+
+.photo-container {
+    width: 42%;
+    position: relative;
+}
+
+.photo-background {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: #dddff4;
+    border-radius: 50%;
+    left: -10%;
+    top: 5%;
+    z-index: 0;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 470px;
+    height: 650px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 220px 220px 30px 30px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 50px rgba(30, 50, 70, 0.12);
+}
+
+
+/* ==============================
+   INTRODUCTION
+   ============================== */
+
+.hero-content {
+    width: 50%;
+}
+
+.small-title {
+    color: #8498ad;
+    letter-spacing: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 6vw, 80px);
+    color: #173b55;
+    margin-bottom: 15px;
+}
+
+.degree {
+    font-size: 28px;
+    color: #294d68;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #6d8498;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4d6478;
+    max-width: 600px;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.button {
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: #214a65;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #173b55;
+}
+
+.secondary-button {
+    border: 1px solid #9aabba;
+    color: #29465c;
+    background: white;
+}
+
+.secondary-button:hover {
+    background: #eef1f6;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 900px) {
+
+    nav {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 25px;
+        text-align: center;
+    }
+
+    .photo-container {
+        width: 80%;
+    }
+
+    .profile-photo {
+        height: 500px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
