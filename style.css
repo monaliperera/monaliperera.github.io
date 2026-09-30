@@ -64,11 +64,10 @@ nav {
 .hero {
     min-height: calc(100vh - 80px);
     display: flex;
-    align-items: flex-start;
-    padding: 70px 8%;
+    align-items: center;
+    padding: 60px 8%;
     gap: 6%;
 }
-
 
 /* ==============================
    PHOTO
@@ -77,30 +76,36 @@ nav {
 .photo-container {
     width: 42%;
     position: relative;
-   overflow: hidden;             
     flex: 0 0 42%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
-
 .photo-background {
     position: absolute;
-    width: 110%;
-    height: 110%;
+    width: 85%;
+    height: 85%;
     background: #dddff4;
     border-radius: 50%;
-    left: -5%;
-    top: 5%;
+    left: 2%;
+    top: 8%;
     z-index: 0;
 }
 
 .profile-photo {
     width: 100%;
-    max-width:calc(100vh - 180px);
+    max-width: 470px;
     height: auto;
+    display: block;
+
     object-fit: cover;
     object-position: center top;
+
     border-radius: 220px 220px 30px 30px;
+
     position: relative;
-    z-index: 1;
+    z-index: 2;
+
     box-shadow: 0 20px 50px rgba(30, 50, 70, 0.12);
 }
 
