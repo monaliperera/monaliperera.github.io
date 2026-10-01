@@ -1,3 +1,4 @@
+
 /* ==============================
    GENERAL
    ============================== */
@@ -8,14 +9,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #faf9f7;
     color: #203b52;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 
@@ -24,12 +25,15 @@ html {
    ============================== */
 
 nav {
-    height: 80px;
+    min-height: 80px;
     background: white;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 6%;
+
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
 }
 
@@ -50,6 +54,7 @@ nav {
     text-decoration: none;
     color: #29465c;
     font-size: 16px;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -60,25 +65,27 @@ nav {
 /* ==============================
    HERO SECTION
    ============================== */
+
 .hero {
     min-height: calc(100vh - 80px);
 
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 
-    padding: 40px 8%;
-
-    gap: 10%;
+    padding: 45px 8%;
+    gap: 8%;
 }
+
+
 /* ==============================
-   PHOTO
+   PHOTO CONTAINER
    ============================== */
 
-
 .photo-container {
-   .photo-container {
     width: 30%;
     max-width: 300px;
+    flex-shrink: 0;
 
     position: relative;
 
@@ -89,7 +96,9 @@ nav {
     isolation: isolate;
 }
 
-/* Decorative oval behind the photograph */
+
+/* Lavender oval behind the photograph */
+
 .photo-background {
     position: absolute;
 
@@ -97,7 +106,6 @@ nav {
     height: 250px;
 
     background: #dddff4;
-
     border-radius: 50%;
 
     left: 50%;
@@ -107,10 +115,13 @@ nav {
 
     z-index: 1;
 }
-/* Photograph */
+
+
+/* Profile photograph */
 
 .profile-photo {
     width: 190px;
+    max-width: 100%;
     height: auto;
 
     display: block;
@@ -121,46 +132,118 @@ nav {
 
 
 /* ==============================
-   INTRODUCTION
+   INTRODUCTION CONTAINER
    ============================== */
+
 .hero-content {
-    width: 55%;
+    flex: 1;
+    min-width: 0;
+    max-width: 700px;
+
     position: relative;
     z-index: 3;
 }
 
+
+/* Small HELLO, I'M text */
+
 .small-title {
     color: #8498ad;
-    letter-spacing: 5px;
-    font-size: 16px;
-    margin-bottom: 20px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
 }
 
-.hero h1 {
+
+/* Name */
+
+.hero-content h1 {
     font-family: Georgia, serif;
-    font-size: clamp(48px, 6vw, 80px);
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.12;
+    font-weight: bold;
+
     color: #173b55;
-    margin-bottom: 15px;
+
+    margin: 0 0 10px 0;
 }
+
+
+/* Degree */
 
 .degree {
-    font-size: 28px;
+    font-size: 21px;
+    line-height: 1.4;
+    font-weight: 500;
+
     color: #294d68;
-    margin-bottom: 20px;
+
+    margin-bottom: 12px;
 }
+
+
+/* Research position and university */
 
 .subtitle {
-    font-size: 18px;
-    color: #6d8498;
+    font-size: 15px;
     line-height: 1.7;
-    margin-bottom: 25px;
+
+    color: #6d8498;
+
+    margin-bottom: 24px;
 }
 
+
+/* ==============================
+   DESCRIPTION PARAGRAPHS
+   ============================== */
+
 .description {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.8;
     color: #4d6478;
-    max-width: 600px;
+
+    max-width: 650px;
+}
+
+
+/* Space between paragraphs */
+
+.description p {
+    margin: 0 0 16px 0;
+}
+
+
+/* Remove extra space after final paragraph */
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Bold text inside the description */
+
+.description strong {
+    color: #29465c;
+    font-weight: 600;
+}
+
+
+/* Links inside the description */
+
+.description a {
+    color: #315d7a;
+    text-decoration: underline;
+    text-decoration-color: #c4cdd8;
+    text-underline-offset: 3px;
+
+    transition: color 0.3s;
+}
+
+.description a:hover {
+    color: #7186a5;
 }
 
 
@@ -170,17 +253,28 @@ nav {
 
 .buttons {
     display: flex;
-    gap: 18px;
-    margin-top: 35px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 25px;
 }
 
 .button {
-    padding: 14px 28px;
+    display: inline-block;
+
+    padding: 12px 22px;
     border-radius: 30px;
+
     text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+    text-align: center;
+    font-size: 14px;
+
+    transition: background 0.3s, color 0.3s;
 }
+
+
+/* Primary button */
 
 .primary-button {
     background: #214a65;
@@ -190,6 +284,9 @@ nav {
 .primary-button:hover {
     background: #173b55;
 }
+
+
+/* Secondary buttons */
 
 .secondary-button {
     border: 1px solid #9aabba;
@@ -203,10 +300,49 @@ nav {
 
 
 /* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        gap: 5%;
+        padding: 40px 5%;
+    }
+
+    .photo-container {
+        width: 28%;
+    }
+
+    .photo-background {
+        width: 185px;
+        height: 225px;
+    }
+
+    .profile-photo {
+        width: 170px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(34px, 4.5vw, 46px);
+    }
+
+    .degree {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+}
+
+
+/* ==============================
    MOBILE
    ============================== */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
     nav {
         height: auto;
@@ -215,32 +351,92 @@ nav {
         gap: 15px;
     }
 
+    .logo {
+        font-size: 25px;
+    }
+
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
     }
 
     .hero {
+        min-height: auto;
+
         flex-direction: column;
-        padding: 50px 25px;
+        align-items: center;
+
+        gap: 35px;
+        padding: 45px 24px 55px;
+
         text-align: center;
     }
 
     .photo-container {
-        width: 80%;
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .photo-background {
+        width: 185px;
+        height: 220px;
     }
 
     .profile-photo {
-        height: 500px;
+        width: 170px;
+        height: auto;
     }
 
     .hero-content {
         width: 100%;
+        max-width: 550px;
+    }
+
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(34px, 8vw, 44px);
+        margin-bottom: 10px;
+    }
+
+    .degree {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .description p {
+        margin-bottom: 16px;
     }
 
     .buttons {
         justify-content: center;
-        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .button {
+        padding: 11px 17px;
+        font-size: 13px;
     }
 }
+
