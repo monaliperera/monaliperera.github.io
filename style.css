@@ -66,9 +66,9 @@ nav {
     display: flex;
     align-items: center;
 
-    padding: 50px 8%;
+    padding: 40px 8%;
 
-    gap: 20%;
+    gap: 10%;
 }
 /* ==============================
    PHOTO
@@ -76,8 +76,9 @@ nav {
 
 
 .photo-container {
-    width: 40%;
-    max-width: 400px;
+   .photo-container {
+    width: 30%;
+    max-width: 300px;
 
     position: relative;
 
@@ -92,8 +93,8 @@ nav {
 .photo-background {
     position: absolute;
 
-    width: 260px;
-    height: 300px;
+    width: 210px;
+    height: 250px;
 
     background: #dddff4;
 
@@ -109,7 +110,7 @@ nav {
 /* Photograph */
 
 .profile-photo {
-    width: 230px;
+    width: 190px;
     height: auto;
 
     display: block;
@@ -123,7 +124,7 @@ nav {
    INTRODUCTION
    ============================== */
 .hero-content {
-    width: 50%;
+    width: 55%;
     position: relative;
     z-index: 3;
 }
