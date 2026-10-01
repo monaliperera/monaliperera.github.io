@@ -68,7 +68,7 @@ nav {
 
     padding: 50px 8%;
 
-    gap: 12%;
+    gap: 20%;
 }
 /* ==============================
    PHOTO
@@ -76,8 +76,8 @@ nav {
 
 
 .photo-container {
-    width: 40%;
-    max-width: 400px;
+    width: 20%;
+    max-width: 200px;
 
     position: relative;
 
@@ -109,8 +109,8 @@ nav {
 /* Photograph */
 
 .profile-photo {
-    width: 280px;
-    height: 280px;
+    width: 100px;
+    height: 100px;
 
     object-fit: contain;
 
