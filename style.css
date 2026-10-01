@@ -77,14 +77,14 @@ nav {
 
 
 .photo-container {
-    width: 38%;
-    max-width: 430px;
+    width: 34%;
+    max-width: 350px;
     position: relative;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
 
-    /* Keeps the oval behind the photo */
     isolation: isolate;
 }
 
@@ -110,13 +110,11 @@ nav {
 /* Photograph */
 
 .profile-photo {
-    width: 82%;
-    max-width: 390px;
+    width: 300px;
+    max-width: 300px;
     height: auto;
 
     object-fit: contain;
-    object-position: center;
-
     display: block;
 
     position: relative;
