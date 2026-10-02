@@ -68,7 +68,7 @@ nav {
 .hero {
     min-height: calc(100vh - 80px);
     display: flex;
-    align-items: center;
+    align-items:flex-start;  
     justify-content: flex-start;   /* pushes photo to the left */
 
     padding: 20px 5% 20px 4%;      /* small left padding = closer to the edge */
@@ -84,6 +84,7 @@ nav {
     width: 600px;
     height: 680px;
     max-height: calc(100vh - 110px);   /* always fits the screen */
+    margin-top: 34px;              /* lines the oval's top edge up with "Monali Perera" */
 
     position: relative;
     display: flex;
@@ -98,9 +99,9 @@ nav {
 .photo-background {
     position: absolute;
     width: 500px;
-    height: 92%;
+    height: 100%;
     left: 50%;
-    bottom: 0;
+    top: 0;
     transform: translateX(-50%);
 
     background: #cfe8fa;           /* light sky blue */
@@ -310,7 +311,7 @@ nav {
 
     .photo-background {
         width: 320px;
-        height: 90%;
+        height: 100%;
     }
 
     .profile-photo {
@@ -371,6 +372,7 @@ nav {
         width: 300px;
         max-width: 100%;
         height: 380px;
+        margin-top: 0;
     }
    .photo-background {
         width: 250px;
