@@ -69,10 +69,10 @@ nav {
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;   /* pushes photo to the left */
 
-    padding: 20px 7%;
-    gap: 70px;              /* space between photo and text */
+    padding: 20px 5% 20px 4%;      /* small left padding = closer to the edge */
+    gap: 50px;                     /* space between photo and text */
 }
 
 /* ==============================
@@ -80,35 +80,35 @@ nav {
    ============================== */
 
 .photo-container {
-    flex: 0 0 340px;        /* fixed width, never shrinks or grows */
-    width: 340px;
-    height: 600px;                      /* about the height of the text block */
-    max-height: calc(100vh - 120px);    /* always fits the screen */
+    flex: 0 0 600px;               /* wider box = bigger photo */
+    width: 600px;
+    height: 680px;
+    max-height: calc(100vh - 110px);   /* always fits the screen */
 
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;  /* photo sits on the bottom edge */
+    align-items: flex-end;
 
     isolation: isolate;
-    overflow: hidden;       /* nothing can spill over the text */
+    overflow: hidden;
 }
 
-/* Lavender oval behind the photograph */
+/* Light sky blue oval behind the photograph */
 .photo-background {
     position: absolute;
-    width: 290px;
-    height: 80%;
+    width: 500px;
+    height: 92%;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
 
-    background: #dddff4;
+    background: #cfe8fa;           /* light sky blue */
     border-radius: 50%;
     z-index: 0;
 }
 
-/* Profile photograph (works whatever class the img has) */
+/* Profile photograph */
 .photo-container img,
 .profile-photo {
     position: relative;
@@ -297,19 +297,20 @@ nav {
    ============================== */
 
 @media (max-width: 1000px) {
-
     .hero {
-        gap: 5%;
-        padding: 40px 5%;
+        gap: 30px;
+        padding: 30px 4%;
     }
 
     .photo-container {
-        width: 28%;
+        flex: 0 0 380px;
+        width: 380px;
+        height: 520px;
     }
 
     .photo-background {
-        width: 185px;
-        height: 225px;
+        width: 320px;
+        height: 90%;
     }
 
     .profile-photo {
@@ -367,19 +368,13 @@ nav {
 
    .photo-container {
         flex: 0 0 auto;
-        width: 250px;
+        width: 300px;
         max-width: 100%;
-        height: 300px;
+        height: 380px;
     }
    .photo-background {
-        width: 210px;
-        height: 260px;
-    }
-     .profile-photo {
-        width: 100%;
-        max-width: 250px;
-        max-height: 300px;
-        height: auto;
+        width: 250px;
+        height: 320px;
     }
 
     .hero-content {
