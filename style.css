@@ -141,6 +141,7 @@ nav {
     max-width: 650px;
 
     align-self: center;          /* vertically centered next to the photo */
+    top: 60px; 
     margin-right: auto;          /* keeps the text block in the middle of the right space */
     margin-left: auto;
 
