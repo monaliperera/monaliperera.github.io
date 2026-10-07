@@ -22,7 +22,7 @@ body {
     background-color: #faf9f7; /* shown if the image fails to load */
     background-image:
         linear-gradient(rgba(250, 249, 247, 0.20), rgba(250, 249, 247, 0.20)),
-        url("Background.png");
+        url("images/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -403,5 +403,53 @@ nav {
     .button {
         padding: 11px 17px;
         font-size: 13px;
+    }
+}
+
+
+/* ==============================
+   ABOUT SECTION
+   ============================== */
+
+.about {
+    padding: 80px 7% 90px;
+    scroll-margin-top: 80px;
+}
+
+.about-inner {
+    max-width: 850px;
+    margin: 0 auto;
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+
+    padding: 45px 50px;
+    border-radius: 18px;
+}
+
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 3.5vw, 40px);
+    color: #173b55;
+
+    margin-bottom: 22px;
+}
+
+.about .description {
+    max-width: 100%;
+}
+
+/* Smooth jump to Home too */
+#home {
+    scroll-margin-top: 80px;
+}
+
+@media (max-width: 900px) {
+    .about {
+        padding: 50px 20px 60px;
+    }
+
+    .about-inner {
+        padding: 30px 24px;
     }
 }
