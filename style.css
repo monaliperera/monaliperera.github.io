@@ -22,7 +22,7 @@ body {
     background-color: #faf9f7; /* shown if the image fails to load */
     background-image:
         linear-gradient(rgba(250, 249, 247, 0.20), rgba(250, 249, 247, 0.20)),
-        url("images/background.jpg");
+        url("Background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,6 +139,10 @@ nav {
     flex: 1;
     min-width: 0;
     max-width: 650px;
+
+    align-self: center;          /* vertically centered next to the photo */
+    margin-right: auto;          /* keeps the text block in the middle of the right space */
+    margin-left: auto;
 
     position: relative;
     z-index: 2;
@@ -431,6 +435,7 @@ nav {
     font-family: Georgia, serif;
     font-size: clamp(30px, 3.5vw, 40px);
     color: #173b55;
+    text-align: center;          /* heading in the center */
 
     margin-bottom: 22px;
 }
